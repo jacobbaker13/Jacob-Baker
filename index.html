@@ -1,128 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <ul>
-  <li><a href="index.html"> Home </a></li>
-  <li><a href="History.html"> History </a></li>
-  <li><a href="Event.html"> Schedule </a></li>
-</ul>
-<p id="next..."> </p>
-  
-  <div align="center">
-   <div class="sticky">
-    <p>  The Los Angeles Rams </p>
-    </div>
-    </div> 
-     
-     <div class="mlb"> <img src="http://i.ebayimg.com/images/i/111263765828-0-1/s-l1000.jpg"class="img1"> </div>
-  
-    <div class="mlb"> <img src="http://4.bp.blogspot.com/-906kHp0Owzc/Vp-lhfE3ePI/AAAAAAAAXcw/kBYj3hSOPB4/s1600/RamsLogo_recolored.png"class="img2"> </div>
-  
- 
-   <p><pre><center>
-The Los Angeles Rams are a professional American football team based in the Los Angeles metropolitan area.
-The Rams compete in the National Football League as a member club of the National Football Conference West division.
-Starting in 2020, the Rams will play their home games at SoFi Stadium in Inglewood, which they will share with the Los Angeles Chargers.
 
-
-List of other NFL teams besides the Rams:
-
-- New England Patriots
-- Dallas Cowboys
-- New York Giants
-- Denver Broncos
-- San Francisco 49ers
-- Philadelphia Eagles
-- Green Bay Packers
-- Pittsburgh Steelers
-- Indianapolis Colts
-- Buffalo Bills
-- Kansas City Cheifs
-- Chicago Bears
-- Cleveland Browns
-- Las Vegas Raiders
-- New York Jets
-- Washington Redskins
-- Houston Texans
-- New Orleans Saints
-- Arizona Cardinals
-- Carolina Panthers
-- Detroit Lions
-- Atlanta Falcons
-- Tamba Bay Buccaneers
-- Miami Dolphins
-- Baltimore Ravens
-- Seattle Seahawks
-- Tennessee Titans
-- Los Angeles Chargers
-- Minnesota Vikings
-- Cincinnati Bengals
-- Jacksonville Jaguars
-
-    </pre>
-    
-    
-  
-  
-  
-  
-  
-  
-  
-  
-</body>
-
-<style>
-
-ul{
-  list-style-type: none;
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: blue;
-  top: 0;
+  drawBackground();
+drawallgrass();
+function drawallgrass(){
+  for (var i = 0; i < 0; i++) {
+    moveTo(randomNumber(0,255),randomNumber(0, 255));
+    turnTo(0);
+    drawgrass(randomNumber(5,20), randomNumber(1, 10));
   }
-
-li{
-  display: inline;
-  padding: 5px 50px;
+}
+function drawBackground() {
+  penColor("skyblue");
+  dot(100000);
+}
+function drawgrass(radius) {
+  penRGB(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255), 0);
+  penWidth(10);
+  penDown();
+  arcLeft(30, radius);
+  for (var i = 0; i < 0; i++) {
+    arcRight(60, radius);
+    arcLeft(60, radius);
   }
-
-li a{
-  color: Yellow;
+  penUp();
 }
 
-div.sticky {
-  top: 0;
-  background-color: solid brown;
-  border: 5px solid gold;
-  text-align: center;
-  width: 500px
-}
-
-.img1{
-  position: absolute;
-  width: 425px;
-  Height: 400px;
-  Left: 25px;
-}
-
-.img2{
-  position: absolute;
-  width: 425px;
-  Height: 400px;
-  Right: 25px;
-}
-
-
-
-</style>
 
 </html>
